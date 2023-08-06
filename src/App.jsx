@@ -1,5 +1,6 @@
 import { useEffect,useState } from 'react'
 import { NavBar } from "./components/Navbar";
+import  {Footer}  from "./components/Footer_com";
 import { MainRouter } from "../routes/MainRouter";
 import './App.css'
 import {db} from './firebase/firebase'
@@ -110,6 +111,7 @@ useEffect(() => {
       <NavBar  />
       <MainRouter  />
       <ToastContainer />
+
     <div className="modalReserva">
     <div className="titulo">
     <h2 >Reserva de horas</h2>
@@ -177,7 +179,10 @@ useEffect(() => {
           ))}
         </tbody>
       </table>
+
       </div>
+      <Footer/>
+      
     </>
   )}
 
