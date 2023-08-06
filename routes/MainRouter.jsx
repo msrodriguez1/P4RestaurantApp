@@ -1,16 +1,16 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { homePage } from './pages/homePage';
-import { cartaPage } from '../pages/cartaPage';
-import { inspiracionesPage } from '../pages/inspiracionesPages';
-import { nosotrosPage } from '../pages/nosotrosPage';
+import { HomePage } from "../src/pages/homePage";
+import { CartaPage } from "../src/pages/cartaPage";
+import { InspiracionesPage } from "../src/pages/inspiracionesPage";
+import { NosotrosPage } from "../src/pages/nosotrosPage";
 
 export const MainRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<homePage />} />
-        <Route path="/carta" element={<cartaPage />} />
-        <Route path="/inspiraciones" element={<inspiracionesPage />} />
-        <Route path='/nosotros' element={<nosotrosPage />} />
+      <Route path="/" element={<HomePage />} />
+        <Route path="/carta" element={<CartaPage />} />
+        <Route path="/inspiraciones" element={<InspiracionesPage />} />
+        <Route path='/nosotros' element={<NosotrosPage />} />
 
       {/* <Route path="*" element={<h1>Not Found</h1>} /> */}
       <Route path="*" element={<Navigate to="/" />} />
